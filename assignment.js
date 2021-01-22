@@ -1,9 +1,13 @@
-function kilometerToMeter(kilometer){
-    var meter = kilometer * 1000;
+
+//calculation of kilometer to meter
+function kilometerToMeter(kilometer){  
+    var meter = kilometer * 1000;      //(we know that 1 kilometer = 1000 meter)
     return meter;
 }
 
-function budgetCalculator(watch, phone, laptop){
+
+//calculation of total purhchasing products
+function budgetCalculator(watch, phone, laptop){  
     var priceOfWatch = watch * 50;
     var priceOfPhone = phone *100;
     var priceOfLaptop = laptop *500;
@@ -11,13 +15,14 @@ function budgetCalculator(watch, phone, laptop){
     return total;
 }
 
-function hotelCost (stayingDays){
-    var cost = 0;
+
+// calculation of hotel cost
+function hotelCost (stayingDays){   
     if (stayingDays <= 10) {
         cost = stayingDays * 100;
     } else if (stayingDays <= 20) {
         var firstTenDays = 10 * 100;
-        var remainingDays = stayingDays - 10;
+        var remainingDays = stayingDays - 10; 
         var nextTenDays = remainingDays * 80;
         cost = firstTenDays + nextTenDays;
     } else {
@@ -25,16 +30,17 @@ function hotelCost (stayingDays){
         var nextTenDays = 10 *80;
         var remainingDays = stayingDays -20;
         var nextFollowingDays = remainingDays * 50;
-        cost = firstTenDays + nextTenDays+ nextFollowingDays
+        cost = firstTenDays + nextTenDays+ nextFollowingDays;
     }
     return cost;
 }
 
 
+// calculation of the longest name in my friendlist
 function megaFriend(array) {
     var longestNameOfArray = "";
     for(var i=0; i < array.length; i++){
-    var letterOfName = array [i];
+        var letterOfName = array [i];
         if(letterOfName.length > longestNameOfArray.length){
             longestNameOfArray = array[i];
         }
